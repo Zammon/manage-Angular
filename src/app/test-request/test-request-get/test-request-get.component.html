@@ -1,0 +1,79 @@
+<app-modal-create *ngIf="status" (closeModal)="setModal($event)"></app-modal-create>
+<div class="container">
+    <button (click)="addItems()">ADD ITEMS</button>
+    <div class="search-container">
+        
+        <div class="title-content">
+            
+            <div class="title-content-name">SuperMarket</div>
+            <div class="title-content-input">
+                <input class="title-item-input" type="text">
+                <div class="title-item-button">ค้นหา</div>
+            </div>
+            
+            <div class="title-content-filter">
+                <div class="title-item-icon"></div>
+                <div class="title-item-font">คัดกรอง</div>
+            </div>
+            
+            <div class="title-content-create">
+                <div class="title-item-icon"></div>
+                <div class="title-item-font">สร้าง</div>
+            </div>
+        
+        </div>
+
+        <div class="product-content">
+            
+            <div class="product-content-title">
+                <div class="product-item-id">
+                    <div class="product-items-font">รหัสสินค้า</div>
+                    <div class="title-item-icon"></div>
+                </div>
+                <div class="product-item-name">
+                    <div class="product-items-font">ชื่อสินค้า</div>
+                    <div class="title-item-icon"></div>
+                </div>
+                <div class="product-item-price">
+                    <div class="product-items-font">ราคาสินค้า</div>
+                    <div class="title-item-icon"></div>
+                </div>
+                <div class="product-item-date">
+                    <div class="product-items-font">วันที่รับของ</div>
+                    <div class="title-item-icon"></div>
+                </div>
+                <div class="product-item-edit">
+                    <div class="product-items-font">แก้ไข/ลบ</div>
+                </div>
+            </div>
+
+            <div class="product-content-items">
+                
+                <div class="items-item" *ngFor="let item of productItems; let i = index;">
+                    <div class="items-item-id">
+                        <div class="items-item-font">{{i}}{{item.idproduct}}</div>
+                        <div class="title-item-icon"></div>
+                    </div>
+                    <div class="items-item-name">
+                        <div class="items-item-font">{{item.name}}</div>
+                        <div class="title-item-icon"></div>
+                    </div>
+                    <div class="items-item-price">
+                        <div class="items-item-font">{{item.price}}</div>
+                        <div class="title-item-icon"></div>
+                    </div>
+                    <div class="items-item-date">
+                        <div class="items-item-font">{{item.packDate}}</div>
+                        <div class="title-item-icon"></div>
+                    </div>
+                    <div class="items-item-edit">
+                        <div class="items-icon-edit" (click)="showModal()"></div>
+                        <div class="items-icon-delete" (click)="delItem(i)"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

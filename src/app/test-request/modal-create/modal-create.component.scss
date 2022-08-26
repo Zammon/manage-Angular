@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    // background-color: #28282891;
+}
+
+.bg-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #28282891;
+}
+
+.title-name {
+    margin-top: 38px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal-box {
+    width: 450px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.295);
+    border-radius: 12px;
+    border: none;
+    padding: 0 50px;
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {
+        position: absolute;
+        top: 190px;
+        opacity: 0;
+    }
+    to {
+        position: absolute;
+        top: 230px;
+        opacity: 1;
+    }
+}
+
+.label-style {
+    font-weight: bold;
+}
+
+.input-style {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #818181;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    padding: 10px;
+}
+
+.input-style:disabled {
+    background-color: #D2D2D2;
+}
+
+.input-style:focus {
+    outline: none;
+}
+
+.button-area {
+    display: flex;
+    height: auto;
+    min-height: 30px;
+    width: 100%;
+    margin-top: 22px;
+    // background-color: #81818123;
+}
+
+.buttons {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0 20px;
+    width: auto;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.buttons.save, .buttons.cancle {
+    cursor: pointer;
+}
+
+.buttons.save:hover, .buttons.cancle:hover {
+    filter: brightness(1.2);
+    transition: ease .5s;
+}
+
+.buttons.save {
+    color: white;
+    border: 1px solid #7471ff;
+    background-color: #625FFB;
+}
+
+.buttons.cancle {
+    color: #818181;
+    border: 2px solid #818181;
+    // background-color: #625FFB;
+}

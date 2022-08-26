@@ -1,0 +1,20 @@
+<div class="container-modal">
+    <div class="modal-box">
+        <div class="title-name">แก้ไข</div>
+        <form action="">
+            <label class="label-style" for="id-product">รหัสสินค้า</label>
+            <input class="input-style" type="text" disabled>
+            <label class="label-style" for="product">ชื่อสินค้า</label>
+            <input class="input-style" type="text">
+            <label class="label-style" for="id-product">ราคาสินค้า</label>
+            <input class="input-style" type="text">
+            <label class="label-style" for="id-product">วันที่รับของ</label>
+            <input class="input-style" type="text" disabled> 
+        </form>
+        <div class="button-area">
+            <button class="buttons save">บันทึก</button>
+            <button class="buttons cancle" (click)="sentClose(false)">ยกเลิก</button>
+        </div>
+    </div>
+    <div class="bg-modal" (click)="sentClose(false)"></div>
+</div>
